@@ -1,6 +1,6 @@
-(function () {
+﻿(function () {
     //->数据源
-    var ary = ["imgs/banner1.jpg", "imgs/banner2.jpg", "imgs/banner3.jpg", "imgs/banner4.jpg"];
+    var ary = ["img/banner1.jpg", "img/banner2.jpg", "img/banner3.jpg", "img/banner4.jpg"];
 
     //->定义几个初始的变量
     var autoTimer = null, step = 0, count = ary.length;
