@@ -6,7 +6,6 @@
     var autoTimer = null, step = 0, count = ary.length;
     var inner = document.getElementById("inner"), imgList = inner.getElementsByTagName("img");
     var tip = document.getElementById("tip"), tipList = tip.getElementsByTagName("li");
-    var btnLeft = document.getElementById("btnLeft"), btnRight = document.getElementById("btnRight");
 
     //->数据绑定
     bindData();
@@ -62,34 +61,20 @@
             var curTip = tipList[i];
             curTip.index = i;
             curTip.onclick = function () {
+                //->先把自动轮播结束
                 window.clearInterval(autoTimer);
+
+                //->然后让inner运动到当前位置
                 step = this.index;
                 animate(inner, {left: -step * 1000}, 500);
+
+                //->开起定时器,并且实现焦点对齐
                 selectTip();
                 autoTimer = window.setInterval(autoMove, 2000);
             }
         }
     }
 
-    //->实现左右切换
-    btnRight.onclick = function () {
-        window.clearInterval(autoTimer);
-        autoMove();
-        autoTimer = window.setInterval(autoMove, 2000);
-    };
-
-    btnLeft.onclick = function () {
-        window.clearInterval(autoTimer);
-        step--;
-        if (step < 0) {
-            step = count - 1;
-            inner.style.left = -count * 1000 + "px";
-        }
-        animate(inner, {left: -step * 1000}, 500);
-        selectTip();
-        autoTimer = window.setInterval(autoMove, 2000);
-    };
-    
     //->实现自动轮播
     function autoMove() {
         step++;
