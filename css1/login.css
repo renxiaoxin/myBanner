@@ -1,0 +1,219 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #333;
+    outline: 0;
+    font-family: "微软雅黑";
+    list-style: none;
+    font-weight: normal;
+}
+
+a, a:hover, a:target, a:active {
+    text-decoration: none;
+    color: #000;
+}
+
+input {
+    display: block;
+    outline: none;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 323px;
+    background-color: #00b38a;
+}
+
+.header .logo {
+    position: absolute;
+    z-index: 9999;
+    top: 70px;
+    left: 136px;
+    width: 128px;
+    height: 54px;
+    background: url("../imgs/Login-6.png") left top no-repeat;
+}
+
+.content {
+    position: absolute;
+    top: 160px;
+    left: 349px;
+    /*z-index: 10;*/
+    padding: 25px;
+    width: 600px;
+    height: 310px;
+    background: #fff;
+    /*box-shadow: 1px 1px 10px 0 #ccc;*/
+    border: 2px solid #f8f8f8;
+}
+/*.content:before{
+    display:block;
+    !*content:"";*!
+    position:absolute;
+    top:0;
+    right:0;
+    border-width:0 20px 20px 0;
+    border-style:solid;
+    border-color:#00B38A #00B38A #ddd #ddd;
+    background:#00B38A;
+     width:0;
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+}*/
+.content .left {
+    float: left;
+    width: 330px;
+    height: 280px;
+    /*border: 1px solid #000000;*/
+    /*clear: both;*/
+}
+.left .left-1,.left-3{
+    margin: 20px auto;
+    width: 290px;
+    height: 45px;
+}
+.left-2{
+    margin: 20px auto;
+    width: 290px;
+    height: 20px;
+}
+.left-1 input {
+    padding-left: 10px ;
+    width: 270px;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    background: #f8f8f8;
+}
+.left .left-2 .forgot_pwd {
+    display: block;
+    position: relative;
+    right: 10px;
+    float: right;
+    line-height: 20px;
+    text-align: right;
+    color: #00b38a;
+}
+
+.left .left-3 input {
+    width: 280px;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background: #00B38A;
+    cursor: pointer;
+}
+.left .left-4 {
+    margin: 20px auto;
+    width: 290px;
+    text-align: center;
+}
+.left .left-4 p{
+    color: #999;
+}
+.left .left-4 p a{
+    display: inline-block;
+    position: relative;
+    text-decoration: underline;
+    color: #00B38A;
+}
+.left .left-4 p a em{
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    left: 62px;
+    width: 18px;
+    height: 17px;
+    background: url("../imgs/Login-2.png")no-repeat center;
+}
+.content .center {
+    float: left;
+    margin-left: 10px;
+    width: 14px;
+    height: 256px;
+    background: url("../imgs/Login-1.jpg") no-repeat center;
+}
+
+.content .right {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    width: 220px;
+    height: 300px;
+    /*border: 1px solid red;*/
+}
+.content .right h5{
+    display: block;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: #999;
+}
+.content .right .login{
+    position: relative;
+    margin: 0 auto;
+    padding-left: 30px;
+    width: 220px;
+    height: 45px ;
+    overflow: hidden;
+}
+.content .right .login li{
+    float: left;
+   margin-right: 12px;
+}
+.content .right .login .login1{
+    display: inline-block;
+    width: 44px;
+    height: 43px;
+    background: url("../imgs/Login-3.png")no-repeat center;
+}
+.content .right .login .login2{
+    display: inline-block;
+    width: 44px;
+    height: 43px;
+    background: url("../imgs/Login-4.png")no-repeat center;
+}
+.content .right .login .login3{
+    display: inline-block;
+    width: 44px;
+    height: 43px;
+    background: url("../imgs/Login-5.png")no-repeat center;
+}
+.content .right .right-bottom{
+    position: relative;
+}
+.content .right .right-bottom p{
+    display: block;
+    position: absolute;
+    top: 168px;
+    left: 50px;
+    font-size: 12px;
+    color: #999;
+}
+.content .right .right-bottom img{
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    border: none;
+    width: 115px;
+    height: 115px;
+}
+.bottom{
+    position: absolute;
+    top: 600px;
+    width: 100%;
+    height: 25px;
+}
+.bottom .floor{
+    line-height: 25px;
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+}
