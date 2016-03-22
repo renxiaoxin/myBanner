@@ -228,7 +228,44 @@ function changeTab() {
     }
 }
 (function(){
+    function openNew(){
+        //获取页面的高度和宽度
+        var sWidth=document.body.scrollWidth;
+        var sHeight=document.body.scrollHeight;
+        //获取页面的可视区域高度和宽度
+        var wHeight=document.documentElement.clientHeight;
+        var oMask=document.createElement("div");
+        oMask.id="mask";
+        oMask.style.height=sHeight+"px";
+        oMask.style.width=sWidth+"px";
+        document.body.appendChild(oMask);
+        var oCity=document.createElement("div");
+        oCity.id="city";
+        oCity.innerHTML="<div class='changeCity'><div id='close'>点击关闭</div></div>";
+        document.body.appendChild(oCity);
+        //获取城市切换框的宽和高
+        var dHeight=oCity.offsetHeight;
+        var dWidth=oCity.offsetWidth;
+        //设置城市切换框的left和top
+        oCity.style.left=sWidth/2-dWidth/2+"px";
+        oCity.style.top=wHeight/2-dHeight/2+"px";
+        //点击关闭按钮
+        var oClose=document.getElementById("close");
 
+        //点击城市切换框以外的区域也可以关闭登陆框
+        oClose.onclick=oMask.onclick=function(){
+            document.body.removeChild(oCity);
+            document.body.removeChild(oMask);
+        };
+    }
+    window.onload=function(){
+            var oBtn=document.getElementById("changeCity_btn");
+            //点击登录按钮
+            oBtn.onclick=function(){
+                openNew();
+                return false;
+            }
+        }
 })();
 
 

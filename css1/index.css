@@ -131,6 +131,7 @@ html,body{
     display: inline;
     font-size: 12px;
     color: #999;
+    cursor: pointer;
 }
 
 .lg_white ul {
@@ -706,14 +707,95 @@ a#backtop:hover{
     font-size: 12px;
     color: #d5d5d5;
 }
-.loginfooter{
+.loginFooter{
     width: 100%;
-    height: 64px;
+    height: 65px;
     position: fixed;
     z-index: 1000;
     bottom: 0;
     left: 0;
-    background: url(http://pstatic.lagou.com/www/static/common/widgets/login_toolbar/img/footerbar_repeat_c5aebac.png) repeat-x;
+    background: url(../imgs/footer.png) repeat-x;
+}
+
+.loginFooter div{
+    position: absolute;
+    top: 0;
+    height: 65px;
+}
+.loginFooter div img{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+.loginFooter div img.img2{
+    position: absolute;
+    top: 20px;
+    left: 80px;
+}
+.loginFooter .loginF{
+    right: 250px;
+    width: 140px;
+    background: #6EC4A6;
+    height: 65px;
+}
+.loginFooter .register{
+    right: 0;
+    width: 250px;
+    height: 65px;
+    background: #EA7976;
+}
+.loginFooter div.loginF:hover{
+    background: #5EB39C;
+}
+.loginFooter div.register:hover{
+    background: #E55E5D;
+}
+/*弹出层样式*/
+#close{
+    background:url("../imgs/close.png") no-repeat;
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    position:absolute;
+    right:5px;
+    top:15px;
+    text-indent:-999em;
+}
+#mask{
+    background-color:#000;
+    opacity:0.5;
+    filter: alpha(opacity=60);
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:1000;
+}
+#city{
+    position:fixed;
+    z-index:1001;
+    -webkit-animation: move 1s 1;
+}
+.changeCity{
+    position:relative;
+    width:509px;
+    height:490px;
+    background:url("../imgs/ch.png") #2A2C2E center center no-repeat;
+}
+@keyframes move {
+    0%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes move {
+    0%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 
