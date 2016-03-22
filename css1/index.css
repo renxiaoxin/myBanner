@@ -533,15 +533,12 @@ a:hover {
     width: 744px;
     height: 900px;
     /*height: 100px;*/
-    border: 1px solid red;
+    border: 1px solid #00b38a;
 }
-/*.right .job_tab_list div{
-    display: none;
-    width: 744px;
-    height: 700px;
-    background: #F6F6F6;
-    border: 1px solid blue;
-}*/
+.right .job_tab_list div{
+    padding:50px;
+
+}
 .right .job_tab_list.tab_select{
     display: block;
     background: #fff;
